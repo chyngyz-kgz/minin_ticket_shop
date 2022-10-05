@@ -1,0 +1,16 @@
+<div class="nav-bar-wrapper">
+    <div class="container">
+        <div class="navbar">
+            <p class="nav-bar__logo" routerLink=""><i class="pi pi-prime" style="font-size: 24px;"></i>EXPLORE MARS</p>
+            <div class="nav-bar__right">
+                <p *ngIf="!authorizationService.currentUserValue" routerLink="login" class="nav-bar__item"><i
+                        class="pi pi-sign-in"></i> Anmelden</p>
+                <p (click)="authorizationService.logout()" *ngIf="authorizationService.currentUserValue"
+                    class="nav-bar__item"><i class="pi pi-sign-out"></i>
+                    Abmelden</p>
+                <p routerLink="register" class="nav-bar__item"><i class="pi pi-user-plus"></i> Registrieren</p>
+                <p routerLink="profile" class="nav-bar__item">Profile</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="flights">
+    <div class="container">
+        <span class="flights__title">Alle Flüge</span>
+        <app-error></app-error>
+        <button *ngIf="authorizationService.userRoleValue === 'admin'" routerLink="/add-new-flight"
+            class="flights__add-btn">
+            <p style="font-size: 24px; margin-right: 10px;" class="pi pi-plus"></p> Neuen Flug hinzufügen
+        </button>
+        <app-flight-card *ngFor="let flight of flightsService.flights" [flight]="flight"></app-flight-card>
+    </div>
+</div>

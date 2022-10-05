@@ -1,0 +1,40 @@
+<div class="register">
+    <div class="container">
+        <span class="register__title">Registration</span>
+        <form (ngSubmit)="registerSubmit()" [formGroup]="registerForm" class="register__form">
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="firstName"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Vorname</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="lastName"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Nachname</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="phone"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Nummer (Handy)</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="email"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Email Adresse</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="password"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Kennwort</label>
+            </span>
+            <app-error></app-error>
+            <button style="background-color: rgba(240, 248, 255, 0.296); color: aliceblue;" pButton type="submit"
+                label="Submit" class="p-button-text"></button>
+        </form>
+    </div>
+</div>

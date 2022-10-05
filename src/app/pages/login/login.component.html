@@ -1,0 +1,22 @@
+<div class="login">
+    <div class="container">
+        <span class="login__title">Anmeldung</span>
+        <form (ngSubmit)="loginSubmit()" [formGroup]="loginForm" class="login__form">
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="email"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Email Adresse</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="password"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Kennwort</label>
+            </span>
+            <app-error></app-error>
+            <button style="background-color: rgba(240, 248, 255, 0.296); color: aliceblue;" pButton type="submit"
+                label="Anmelden" class="p-button-text"></button>
+        </form>
+    </div>
+</div>

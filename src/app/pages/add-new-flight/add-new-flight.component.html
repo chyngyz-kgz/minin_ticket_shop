@@ -1,0 +1,40 @@
+<div class="add-new-flight">
+    <div class="container">
+        <span class="add-new-flight__title">Bitte füllen Sie die folgenden Felder aus</span>
+        <form (ngSubmit)="addFlightSubmit()" [formGroup]="addFlightForm" class="add-new-flight__form">
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="from_location"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Station</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="departure_time"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Zeit und Datum der Abreise</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="arrival_time"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Zeit und Datum der Ankunft</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="duration"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Flugstunden</label>
+            </span>
+            <span style="margin-bottom: 5vh;" class="p-float-label">
+                <input formControlName="total_seats"
+                    style="width: 30vw; background-color: rgba(240, 248, 255, 0.296); border: 0px; color: aliceblue;"
+                    id="float-input" type="text" pInputText>
+                <label for="float-input">Anzahl der Sitzplätze</label>
+            </span>
+            <app-error></app-error>
+            <button style="background-color: rgba(240, 248, 255, 0.296); color: aliceblue;" pButton type="submit"
+                label="Submit" class="p-button-text"></button>
+        </form>
+    </div>
+</div>

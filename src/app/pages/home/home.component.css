@@ -1,0 +1,114 @@
+.home {
+    padding-top: 10vh;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assets/images/space-bg.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    box-sizing:inherit;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.home__hero{
+    height: 50vh;
+    display: flex;flex-direction: column;
+    justify-content: space-around;
+}
+
+.home__hero__title{
+    color: aliceblue;
+    font-size: 28px;
+}
+
+.home__hero__description{
+    color: aliceblue;
+    font-size: 24px;
+    opacity: 0.6;
+}
+
+.btns-group__btn{
+    width: 17vw;
+    height: 50px;
+    background-color: transparent;
+    border: 3px white;
+    border-style: solid;
+    color: aliceblue;
+    margin-right: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btns-group__btn-primary{
+    width: 17vw;
+    height: 50px;
+    background-color: rgb(9, 176, 9);
+    color: aliceblue;
+    font-size: 18px;
+    margin-right: 5px;
+    border: 3px rgb(9, 176, 9);
+    border-style: solid;
+    cursor: pointer;
+}
+
+.home__mars-img{
+    position: absolute;
+    right: 5vw;
+    top: 20vh;
+    height: 70vh;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    z-index: 1;
+}
+.home__mars-img:hover{
+    transform: rotate(3deg);
+}
+
+.mars-img__description{
+    width: 15vw;
+    font-size: 18px;
+    opacity: 0.8;
+    color: aliceblue;
+    right: 30vw;
+    position: absolute;
+    opacity: 0;
+    top: 68vh;
+    z-index: 0;
+    line-height: 30px;
+    transition: 1000ms ease-in-out;
+}
+
+.home__mars-img:hover+.mars-img__description{
+    right: 38vw;
+    opacity: 1;
+    animation-name: mars-img__description;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+}
+
+.home__earth-img {
+    position: absolute;
+    right: 60vw;
+    top: 10%;
+    height: 15vh;
+    transition: 700ms;
+    transition-timing-function: ease-in-out;
+}
+
+.home__earth-img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes mars-img__description{
+    from{
+        right: 30vw;
+        opacity: 0;
+    }
+    to{
+        right: 38vw;
+        opacity: 1;
+    }
+}

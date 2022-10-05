@@ -1,0 +1,17 @@
+<div class="profile">
+    <div *ngIf="profileService.profileData" class="container">
+        <p class="profile__title">Ihr Profil</p>
+        <p style="font-size: 40px; color: aliceblue; display: block; margin: 10px auto; opacity: 0.8;"
+            class="pi pi-user">
+        </p>
+        <span class="profile__fullname">{{profileService.profileData.first_name + ' ' +
+            profileService.profileData.last_name}}
+        </span>
+        <p class="profile__info">E-Mail Adresse: {{profileService.profileData.email}}</p>
+        <p class="profile__info">Telefonnummer: {{profileService.profileData.phone}}</p>
+        <p class="profile__title">Ihre Fluge & Tickets:</p>
+        <p *ngIf="!profileService.profileData.tickets.length" class="profile__info">Sie haben noch keine Tickets</p>
+        <app-ticket-card *ngFor="let flight of profileService.profileData.tickets" [flight]="flight"
+            [ticketStatus]="flight.status"></app-ticket-card>
+    </div>
+</div>

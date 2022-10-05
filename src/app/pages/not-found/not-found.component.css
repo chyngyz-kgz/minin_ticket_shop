@@ -1,0 +1,21 @@
+.not-found {
+    padding-top: 10vh;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../../assets/images/space-bg.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    box-sizing: inherit;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+}
+
+.not-found__title{
+    color: aliceblue;
+    font-size: 28px;
+    opacity: 0.8;
+}

@@ -1,0 +1,33 @@
+<div class="cardWrap">
+    <div class="card cardLeft">
+        <h1>{{flight.from_location}}<span> - {{flight.to_location}}</span></h1>
+        <div class="title">
+            <h2>{{flight.duration}}</h2>
+            <span>St. unterwegs</span>
+        </div>
+        <div class="name">
+            <h2>{{profileService.profileData.first_name+' '+profileService.profileData.last_name}}</h2>
+            <span>name</span>
+        </div>
+        <div class="seat">
+            <h2>{{flight.departure_time}}</h2>
+            <span>Abflug</span>
+        </div>
+        <div class="time">
+            <h2>{{flight.arrival_time}}</h2>
+            <span>Ankunft</span>
+        </div>
+
+    </div>
+    <div class="card cardRight">
+        <div class="eye">
+            <p style="font-size: 18px;" class="pi pi-prime"></p>
+        </div>
+        <div class="number">
+            <h3>{{ticketStatus}}</h3>
+            <span>Status</span>
+        </div>
+        <div class="barcode"></div>
+    </div>
+
+</div>

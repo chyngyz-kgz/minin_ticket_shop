@@ -1,0 +1,31 @@
+<div class="flight-card">
+    <div class="flight-card__info">
+        <span class="card__info__text">Von:</span>
+        <span class="card__info__text">{{flight.from_location}}</span>
+    </div>
+    <div class="flight-card__info">
+        <span class="card__info__text">Nach:</span>
+        <span class="card__info__text">{{flight.to_location}}</span>
+    </div>
+    <div class="flight-card__info">
+        <span class="card__info__text">Abflug:</span>
+        <span class="card__info__text">{{flight.departure_time}}</span>
+    </div>
+    <div class="flight-card__info">
+        <span class="card__info__text">Ankunft:</span>
+        <span class="card__info__text">{{flight.arrival_time}}</span>
+    </div>
+    <div class="flight-card__info">
+        <span class="card__info__text">Dauer:</span>
+        <span class="card__info__text">{{flight.duration}} Stunden</span>
+    </div>
+    <div class="flight-card__info">
+        <span class="card__info__text">Passagiere:</span>
+        <span class="card__info__text">{{flight.total_seats}}</span>
+    </div>
+    <div class="flight-card__info">
+        <button (click)="issueSubmit(flight.flight_id)"
+            style="background-color: rgba(240, 248, 255, 0.296); color: aliceblue;" pButton type="button"
+            label="Buchen / Kaufen" class="p-button-text"></button>
+    </div>
+</div>

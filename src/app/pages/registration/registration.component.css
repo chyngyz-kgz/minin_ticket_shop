@@ -1,0 +1,22 @@
+.register{
+    padding-top: 10vh;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    background-attachment: fixed;
+    position: relative;
+    box-sizing: inherit;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+}
+
+.register__title{
+    color: aliceblue;
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+.register__form{
+    margin-top: 5vh;
+}

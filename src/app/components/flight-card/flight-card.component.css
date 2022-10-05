@@ -1,0 +1,24 @@
+.flight-card{
+    height: 20vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.487);
+    /* border: 2px rgba(255, 255, 255, 0.572) solid;
+    border-radius: 7px; */
+    margin-bottom: 5vh;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.flight-card__info{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__info__text{
+    font-size: 18px;
+    font-weight: 200;
+}
