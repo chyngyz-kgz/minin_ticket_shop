@@ -5,6 +5,7 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { BASE_URL } from '../constants/urls';
 import { INewUser, IResponse, IUserData } from '../models/authorization';
 import { ErrorService } from './error.service';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,8 @@ export class AuthorizationService {
   constructor(
     private http: HttpClient,
     private errorService: ErrorService,
-    private router: Router
+    private router: Router,
+    private storageSevice: StorageService
   ) {
     this.currentUserSubject = new BehaviorSubject<string>(
       JSON.parse(localStorage.getItem('currentUser')!)
@@ -63,8 +65,14 @@ export class AuthorizationService {
           if (!res.success) {
             this.errorService.handle(res.message);
           } else {
-            localStorage.setItem('currentUser', JSON.stringify(res.data.token));
-            localStorage.setItem('userRole', JSON.stringify(res.data.role));
+            this.storageSevice.saveData(
+              'currentUser',
+              JSON.stringify(res.data.token)
+            );
+            this.storageSevice.saveData(
+              'userRole',
+              JSON.stringify(res.data.role)
+            );
             this.currentUserSubject.next(res.data.token);
             this.userRoleSubject.next(res.data.role);
 
@@ -75,7 +83,8 @@ export class AuthorizationService {
   }
 
   logout() {
-    localStorage.removeItem('currentUser');
+    this.storageSevice.removeData('currentUser');
+    this.storageSevice.removeData('userRole');
     this.currentUserSubject.next('');
 
     this.router.navigate(['/']);

@@ -4,6 +4,9 @@
         <p style="font-size: 40px; color: aliceblue; display: block; margin: 10px auto; opacity: 0.8;"
             class="pi pi-user">
         </p>
+
+        <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)">
+
         <span class="profile__fullname">{{profileService.profileData.first_name + ' ' +
             profileService.profileData.last_name}}
         </span>
